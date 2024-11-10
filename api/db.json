@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": 1731149275652,
+      "name": "syed",
+      "email": "syed@gmail.com",
+      "password": "$2a$10$w54Pic0d7NpL6WIE.IbW7eWXsvTsqcmfQ6Ba81pbKV1cSD4xJuC3G"
+    },
+    {
+      "id": 1731242990286,
+      "name": "Newuser",
+      "email": "admin@gmail.com",
+      "password": "$2a$10$tsRw23J4UMDAlmkmVdFDnOOE2wEUi6H4IsRppPMvbXc1Uh5nSAqT6"
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "creative",
+      "description": "MAKE EVERYTHING AS CREATIVE\n",
+      "userId": 1731149275652
+    },
+    {
+      "id": 2,
+      "title": "Home theatre",
+      "description": "It is a electronic device it helps to hear songs\n",
+      "userId": 1731149275652
+    },
+    {
+      "id": 3,
+      "title": "Friends",
+      "description": "Make everyone happy\n",
+      "userId": 1731149275652
+    },
+    {
+      "id": 4,
+      "title": "Laptop",
+      "description": "It is a electronic device it s developer things",
+      "userId": 1731149275652
+    },
+    {
+      "id": 5,
+      "title": "Towel ",
+      "description": "It is clothes",
+      "userId": 1731149275652
+    }
+  ]
+}
