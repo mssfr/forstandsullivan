@@ -24,10 +24,8 @@ function Login({onLogin}) {
             setError('');
             console.log('User logged in successfully:', response);
 
-            // Optionally save a token to localStorage or state (if using JWT)
             localStorage.setItem('token', response.token);
 
-            // Redirect to the homepage or dashboard
             navigate('/dashboard');
         } catch (error) {
             setError(error.message || 'Login failed. Please check your credentials.');

@@ -7,7 +7,6 @@ function HomePages() {
   const [error, setError] = useState("");
   
 
-  // Fetch blogs from backend based on the token in localStorage
   const fetchBlogs = async () => {
     const token = localStorage.getItem("token");
 
@@ -26,7 +25,6 @@ function HomePages() {
     }
   };
 
-  // Fetch blogs once when the component is mounted
   useEffect(() => {
     fetchBlogs();
   }, []);

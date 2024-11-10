@@ -12,7 +12,7 @@ function LandingPage() {
       try {
         const response = await GetallBlog();
         setError('');
-        const sortedBlogs = response.sort((a, b) => b.id - a.id); // Sort blogs by descending order of id
+        const sortedBlogs = response.sort((a, b) => b.id - a.id); 
         setBlogs(sortedBlogs);
       } catch (error) {
         setError('Failed to load blogs');
@@ -21,11 +21,6 @@ function LandingPage() {
 
     fetchData();
   }, []);
-
-  // Handle Previous button click
-
-  // Autoplay functionality - transition to next blog every 3 seconds
-
 
   return (
     <div style={styles.container}>
@@ -63,8 +58,7 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '88vh', // Full viewport height
-    
+    height: '88vh', 
     background: 'radial-gradient(circle, rgba(200,198,127,1) 0%, rgba(111,167,209,1) 5%, rgba(98,189,190,1) 9%, rgba(146,200,147,1) 14%, rgba(204,170,211,1) 20%, rgba(242,163,219,1) 28%, rgba(146,190,238,1) 38%, rgba(135,204,240,1) 49%, rgba(131,165,241,1) 58%, rgba(212,174,195,1) 66%, rgba(152,184,223,1) 76%, rgba(68,173,245,1) 91%, rgba(45,171,253,0.9724264705882353) 95%)',
     textAlign: 'center',
   },

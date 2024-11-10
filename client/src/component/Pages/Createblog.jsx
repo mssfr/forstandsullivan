@@ -17,7 +17,7 @@ function Createblog({ setBlogs }) {
         const token = localStorage.getItem("token");
 
         if (!token) {
-            console.error("User is not authenticated. No token found.");
+            console.error("User Not authenticated. No token found.");
             return;
         }
         let title = post.title;

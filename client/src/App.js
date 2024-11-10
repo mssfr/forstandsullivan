@@ -17,14 +17,13 @@ function App() {
     setLoggedIn(!!token);
 }, []);
 
-// Function to handle login
 const handleLogin = (token) => {
-    localStorage.setItem('token', token); // Save token
+    localStorage.setItem('token', token); 
     setLoggedIn(true); 
 }
-// Function to handle logout
+
 const handleLogout = () => {
-    localStorage.removeItem('token'); // Remove token
+    localStorage.removeItem('token'); 
     setLoggedIn(false); 
 };
 console.log("loggedIn",loggedIn)
@@ -36,8 +35,7 @@ console.log("loggedIn",loggedIn)
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login setLoggedIn={setLoggedIn} onLogin={handleLogin} />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/404" element={<NotFound />} />
-        
+          <Route path="/404" element={<NotFound />} />        
           <Route 
             path="/dashboard" 
             element={<PrivateRoute element={HomePages} />} 

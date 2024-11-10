@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000', // Set your base URL
+  baseURL: 'http://localhost:5000', 
 });
 
 export const registerUser = async (userData) => {
@@ -48,7 +48,7 @@ export const GetalluserBlog = async (token) => {
   try {
     const response = await api.get("/userblogs", {
       headers: {
-        Authorization: `Bearer ${token}` // Send the token in the Authorization header
+        Authorization: `Bearer ${token}` 
       },
     });
     return response.data;

@@ -12,7 +12,7 @@ function Navbar({ loggedIn ,onLogout }) {
       padding: '10px 20px',
       backgroundColor: '#282c34',
       color: 'white',
-      flexWrap: 'wrap', // Allows wrapping on smaller screens
+      flexWrap: 'wrap', 
     },
     brand: {
       fontSize: '24px',
@@ -28,8 +28,8 @@ function Navbar({ loggedIn ,onLogout }) {
       
       gap: '20px',
       padding: '10px',
-      '@media (max-width: 600px)': { // Media query for small screens
-        flexDirection: 'column', // Stack links vertically
+      '@media (max-width: 600px)': { 
+        flexDirection: 'column',
         gap: '10px',
       },
       
@@ -38,8 +38,8 @@ function Navbar({ loggedIn ,onLogout }) {
       
       gap: '20px',
       padding: '1px',
-      '@media (max-width: 600px)': { // Media query for small screens
-        flexDirection: 'column', // Stack links vertically
+      '@media (max-width: 600px)': { 
+        flexDirection: 'column',
         gap: '10px',
       },
       
@@ -60,14 +60,14 @@ function Navbar({ loggedIn ,onLogout }) {
       color: 'white',
       cursor: 'pointer',
       fontSize: '18px',
-      '@media (max-width: 600px)': { // Media query for small screens
+      '@media (max-width: 600px)': { 
         fontSize: '16px',
       },
     },
   };
   const handleLogoutClick = () => {
-    onLogout(); // Calls handleLogout from App
-    navigate('/login'); // Redirect to login page
+    onLogout(); 
+    navigate('/login'); 
 };
 
   return (
