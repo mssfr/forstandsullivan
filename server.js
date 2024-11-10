@@ -27,7 +27,6 @@ const writeDB = (data) => {
 app.post("/register", async (req, res) => {
     const { name, email, password } = req.body;
     const db = readDB();
-//
     if (db.users.find(user => user.email === email)) {
         return res.status(400).json({ message: "Email ID already exists" });
     }
@@ -74,35 +73,32 @@ app.get('/blogs', (req, res) => {
 app.post("/createblog", (req, res) => {
     const { token, title, description } = req.body;
 
-    // Check if the token is provided
     if (!token) {
         return res.status(401).json({ message: "No token provided" });
     }
 
     try {
-        // Verify the token
+ 
         const decoded = jwt.verify(token, SECRET_KEY);
 
-        // Read the database
+
         const data = readDB();
 
-        // Ensure the blogs array exists
         if (!data.blogs) {
-            data.blogs = []; // Initialize if it doesn't exist
+            data.blogs = [];
         }
 
-        // Create a new blog entry
+       
         const newBlog = {
-            id: data.blogs.length + 1, // Unique ID for the blog
+            id: data.blogs.length + 1, 
             title,
             description,
             userId: decoded.id
         };
 
-        // Add the new blog to the array
+        
         data.blogs.push(newBlog);
 
-        // Write the updated data back to the database
         writeDB(data);
 
        
